@@ -40,6 +40,7 @@ input {
     background: #412f84;
 }
 .container {
+    position: relative;
     width: 600px;
     padding: 30px 50px;
     border-radius: 10px;
@@ -48,10 +49,12 @@ input {
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-bottom: 1px solid rgba(128, 128, 128, 0.674);
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    z-index: 1;
+    /* overflow: hidden; */
 }
 .title {
     text-align: center;
-    font-size: 24px;
+    font-size: 26px;
     letter-spacing: 1px;
     color: #6d459d;
     margin-bottom: 20px;
@@ -85,7 +88,14 @@ input {
     flex-direction: column;
     margin-bottom: 10px;
 }
+.row .result {
+    cursor: default;
+}
+.row .result:focus {
+    border-color: #f0f0f0;
+}
 .calc label {
+    position: relative;
     margin: 2px 4px;
     color: #4e576a;
     font-size: 16px;
@@ -112,6 +122,9 @@ input {
     align-items: center;
     justify-content: space-between;
     margin-bottom: 20px;
+}
+.operator {
+    border-top: 2px solid #9b62e0;
 }
 .feature-btn {
     width: 100%;

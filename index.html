@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Calculation Program</title>
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <div class="wrraper finisher-header">
         <div class="container">
-            <h2 class="title">Calculation Programing</h2>
+            <h2 class="title">Calculation Program</h2>
             <form name="calculator-form" class="calc">
                 <div class="row">
                     <label>Number A</label><input class="num1 field" type="text" placeholder="Enter number A" name="value">
@@ -26,10 +26,10 @@
     
             <div class="button-box">
                 <div class="calculation-btn">
-                    <button class="operator btn" onclick="add()" data-cal="+">Add</button>
-                    <button class="operator btn" onclick="minus()" data-cal="-">Minus</button>
-                    <button class="operator btn" onclick="multifly()" data-cal="*">Multiply</button>
-                    <button class="operator btn" onclick="divide()" data-cal="/">Divide</button>
+                    <button class="operator btn" onclick="add()">Add</button>
+                    <button class="operator btn" onclick="minus()">Minus</button>
+                    <button class="operator btn" onclick="multiply()">Multiply</button>
+                    <button class="operator btn" onclick="divide()">Divide</button>
                 </div>
                 <div class="feature-btn">
                     <button class="resetBtn btn" id="reset" onclick="clearInput()" >Reset</button>
@@ -43,36 +43,34 @@
     <script src="./finisher-header.es5.min.js"></script>
     <script type="text/javascript">
         new FinisherHeader({
-            "count": 12,
+            "count": 6,
             "size": {
-                "min": 800,
-                "max": 1500,
+                "min": 1100,
+                "max": 1300,
                 "pulse": 0
             },
             "speed": {
                 "x": {
-                "min": 0.6,
-                "max": 3
+                "min": 0.1,
+                "max": 0.3
                 },
                 "y": {
-                "min": 0.6,
-                "max": 3
+                "min": 0.1,
+                "max": 0.3
                 }
             },
             "colors": {
-                "background": "#a459ff",
+                "background": "#b465ff",
                 "particles": [
-                "#ff681c",
-                "#66d5ff",
-                "#231efe",
-                "#ff0a53",
-                "#ff60ff"
+                "#6bd6ff",
+                "#ffcb57",
+                "#ff6a71"
                 ]
             },
-            "blending": "lighten",
+            "blending": "overlay",
             "opacity": {
-                "center": 0.6,
-                "edge": 0
+                "center": 1,
+                "edge": 0.1
             },
             "skew": 0,
             "shapes": [

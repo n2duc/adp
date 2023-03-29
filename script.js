@@ -24,20 +24,23 @@ function checkNumber(a, b, c) {
         err.innerText = "";
     } else {
         if (isNaN(a) && isNaN(b)) {
-            err.innerText = `Vui long nhap du lieu so`;
+            err.innerText = `Please enter the correct value to perform the calculation.`;
             result.innerText = "";
         } else {
             if (isNaN(a)) {
-                err.innerText = `Vui long nhap a o dang so`;
+                err.innerText = `Please enter a numeric value in Number A`;
                 result.innerText = "";
             } else if (isNaN(b)) {
-                err.innerText = `Vui long nhap b o dang so`;
+                err.innerText = `Please enter a numeric value in Number B`;
                 result.innerText = "";
             }
         }
     }
 }
-function multifly() {
+function deleteNumber(number) {
+    number.value = number.value.substr(0, number.value.length - 1);
+}
+function multiply() {
     let a = parseFloat(numA.value);
     let b = parseFloat(numB.value);
     let c = a * b;
@@ -58,10 +61,6 @@ function minus() {
 function divide() {
     let a = parseFloat(numA.value);
     let b = parseFloat(numB.value);
-    let c = (a / b).toFixed(3);
-    if (b === 0) {
-        err.innerText = `b phai khac 0`;
-    } else {
-        checkNumber(a, b, c);
-    }
+    let c = (a / b).toFixed(4);
+    (b === 0) ? err.innerText = `Cannot division by 0` : checkNumber(a, b, c);
 }
