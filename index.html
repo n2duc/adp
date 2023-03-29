@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="wrraper finisher-header">
+        <div class="container">
+            <h2 class="title">Calculation Programing</h2>
+            <form name="calculator-form" class="calc">
+                <div class="row">
+                    <label>Number A</label><input class="num1 field" type="text" placeholder="Enter number A" name="value">
+                </div>
+                <div class="row">
+                    <label>Number B</label><input class="num2 field" type="text" placeholder="Enter number B" name="value">
+                </div>
+                <p class="error"></p>
+                <div class="row">
+                    <label>Result</label><input type="text" class="result field" readonly="true">
+                </div>
+            </form>
+    
+            <div class="button-box">
+                <div class="calculation-btn">
+                    <button class="operator btn" onclick="add()" data-cal="+">Add</button>
+                    <button class="operator btn" onclick="minus()" data-cal="-">Minus</button>
+                    <button class="operator btn" onclick="multifly()" data-cal="*">Multiply</button>
+                    <button class="operator btn" onclick="divide()" data-cal="/">Divide</button>
+                </div>
+                <div class="feature-btn">
+                    <button class="resetBtn btn" id="reset" onclick="clearInput()" >Reset</button>
+                    <button class="exitBtn btn" onclick="exitApp()">Exit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+    <!-- Animation BG -->
+    <script src="./finisher-header.es5.min.js"></script>
+    <script type="text/javascript">
+        new FinisherHeader({
+            "count": 12,
+            "size": {
+                "min": 800,
+                "max": 1500,
+                "pulse": 0
+            },
+            "speed": {
+                "x": {
+                "min": 0.6,
+                "max": 3
+                },
+                "y": {
+                "min": 0.6,
+                "max": 3
+                }
+            },
+            "colors": {
+                "background": "#a459ff",
+                "particles": [
+                "#ff681c",
+                "#66d5ff",
+                "#231efe",
+                "#ff0a53",
+                "#ff60ff"
+                ]
+            },
+            "blending": "lighten",
+            "opacity": {
+                "center": 0.6,
+                "edge": 0
+            },
+            "skew": 0,
+            "shapes": [
+                "c"
+            ]
+        });
+    </script>
+</body>
+</html>
