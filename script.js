@@ -40,12 +40,6 @@ function checkNumber(a, b, c) {
 function deleteNumber(number) {
     number.value = number.value.substr(0, number.value.length - 1);
 }
-function multiply() {
-    let a = parseFloat(numA.value);
-    let b = parseFloat(numB.value);
-    let c = a * b;
-    checkNumber(a, b, c);
-}
 function add() {
     let a = parseFloat(numA.value);
     let b = parseFloat(numB.value);
@@ -55,7 +49,13 @@ function add() {
 function minus() {
     let a = parseFloat(numA.value);
     let b = parseFloat(numB.value);
-    let c = a - b;
+    let c = (a - b).toFixed(4);
+    checkNumber(a, b, c);
+}
+function multiply() {
+    let a = parseFloat(numA.value);
+    let b = parseFloat(numB.value);
+    let c = a * b;
     checkNumber(a, b, c);
 }
 function divide() {
